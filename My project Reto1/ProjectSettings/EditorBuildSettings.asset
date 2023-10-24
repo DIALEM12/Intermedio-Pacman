@@ -10,14 +10,11 @@ EditorBuildSettings:
     guid: 4affcd5a631b4294d9efbee6f0dff7d2
   - enabled: 1
     path: Assets/Scenes/Inicio2.unity
-    guid: fa0fea478c52cd047827d359c10b47b8
+    guid: a9107230f2fd56e4ba05b6688f20473c
   - enabled: 1
     path: Assets/Scenes/Reto 1.unity
     guid: fb91030986906e84d8d33eabd9896ccf
   - enabled: 1
-    path: Assets/Scenes/Desarrolladores.unity
-    guid: b0bcf1ef33d63b044a15d8ca7be25a39
-  - enabled: 1
     path: Assets/Scenes/Creditos.unity
-    guid: a9107230f2fd56e4ba05b6688f20473c
+    guid: fa0fea478c52cd047827d359c10b47b8
   m_configObjects: {}

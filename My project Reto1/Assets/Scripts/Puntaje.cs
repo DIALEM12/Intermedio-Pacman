@@ -10,12 +10,18 @@ public class Puntaje : MonoBehaviour
     public GameObject CherryVariant;
     public GameObject MuroDestroy;
     
-    
+   
+
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-        textMesh = GetComponent<TextMeshProUGUI>();    
+        textMesh = GetComponent<TextMeshProUGUI>();
+
+    
+    
     }
 
     // Update is called once per frame
@@ -33,6 +39,8 @@ public class Puntaje : MonoBehaviour
 
         }
 
+       
+
     }
 
     public void SumarPuntos(float puntosEntrada)
@@ -41,4 +49,15 @@ public class Puntaje : MonoBehaviour
        
     }
     
+    
+
+
+
+   
+
+    
+        
 }
+
+    
+

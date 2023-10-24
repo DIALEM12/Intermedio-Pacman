@@ -6,7 +6,7 @@ public class Move : MonoBehaviour
 {
     public float speed = 5f;
     public float rotationSpeed = 20f;
-    void Update()
+    public void Update()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
@@ -16,6 +16,7 @@ public class Move : MonoBehaviour
         transform.position = transform.position + movement * speed * Time.deltaTime;
 
         if (movement != Vector3.zero) transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), rotationSpeed * Time.deltaTime);
+        AudioManager.Instance.PlaySFX("Waka");
     }
 
 }

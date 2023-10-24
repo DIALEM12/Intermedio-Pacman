@@ -20,6 +20,7 @@ public class Winner : MonoBehaviour
             Destroy(gameObject);
             Destroy(player);
             winnerPanel.SetActive(true);
+            AudioManager.Instance.PlaySFX("Win");
 
         }
     }

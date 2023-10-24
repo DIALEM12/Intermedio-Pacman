@@ -31,14 +31,19 @@ public class Vida1 : MonoBehaviour
         
         Debug.Log("vida: " + vida);
         if(vida <= 0){            
-            gameOver.SetActive(true);
-            Destroy(gameObject);
+            
+            Destroy(gameObject, 2.0f);
 
-            AudioManager.Instance.musicSource.Stop();
-            AudioManager.Instance.PlaySFX("gameover");
+            
+            gameOver.SetActive(true);
+
+
+            //AudioManager.Instance.musicSource.Stop();
+            AudioManager.Instance.PlaySFX("gameOver");
             
         }
     }
+
 
     public void efectoDano(Vector2 posicion, float direccion){        
         

@@ -7,8 +7,8 @@ public class PersonajePatrullaje : MonoBehaviour
 {
     [SerializeField] GameObject Enemigo;
     [SerializeField] Transform[] puntosControl;
-    [SerializeField] float velocidad = 1;
-    private float new_Velocidad = 7f;
+    public float velocidad = 1;
+    
 
     // Start is called before the first frame update
     void Start()
