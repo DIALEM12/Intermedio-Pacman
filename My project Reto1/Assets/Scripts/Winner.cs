@@ -16,7 +16,7 @@ public class Winner : MonoBehaviour
         {
             //Instantiate(efecto, transform.position, Quaternion.identity);
             
-            //AudioManager.Instance.PlaySFX("Coin");
+            
             Destroy(gameObject);
             Destroy(player);
             winnerPanel.SetActive(true);

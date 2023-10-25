@@ -12,15 +12,19 @@ public class Vida1 : MonoBehaviour
     private PersonajeController_2 player;
     private Animator animator;
 
+    public GameObject ParticleSystem1;
+
     // Start is called before the first frame update
     void Start()
     {
         vida = maximoVida;   
         player = GetComponent<PersonajeController_2>();
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
         
 
     }
+
+   
 
 
 
@@ -30,9 +34,10 @@ public class Vida1 : MonoBehaviour
         vida = vida - dano;        
         
         Debug.Log("vida: " + vida);
-        if(vida <= 0){            
-            
-            Destroy(gameObject, 2.0f);
+        if(vida <= 0){
+
+            ParticleSystem1.SetActive(true);
+            Destroy(gameObject,3f);
 
             
             gameOver.SetActive(true);
@@ -47,14 +52,16 @@ public class Vida1 : MonoBehaviour
 
     public void efectoDano(Vector2 posicion, float direccion){        
         
-        animator.SetTrigger("Golpe");
+        //animator.SetTrigger("Golpe");
         player.Rebote(posicion, direccion);
     }
 
-   
-
-   
     
 
-    
+
+
+
+
+
+
 }

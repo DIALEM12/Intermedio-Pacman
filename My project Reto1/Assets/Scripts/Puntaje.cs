@@ -9,8 +9,8 @@ public class Puntaje : MonoBehaviour
     private TextMeshProUGUI textMesh;
     public GameObject CherryVariant;
     public GameObject MuroDestroy;
-    
-   
+    public GameObject Ghost;
+
 
 
 
@@ -20,8 +20,8 @@ public class Puntaje : MonoBehaviour
     {
         textMesh = GetComponent<TextMeshProUGUI>();
 
-    
-    
+
+
     }
 
     // Update is called once per frame
@@ -29,35 +29,53 @@ public class Puntaje : MonoBehaviour
     {
         textMesh.text = puntos.ToString("0");
 
-       
 
-        if (puntos == 15)
+        if (puntos >= 4)
         {
-            Debug.Log("Cherry");
-            CherryVariant.SetActive(true);
-            Destroy(MuroDestroy);
+            // Obtén una referencia al componente "PersonajePatrullaje" en el mismo GameObject.
+            PersonajePatrullaje personaje = GetComponent<PersonajePatrullaje>();
+
+            if (personaje != null)
+            {
+                // Modifica la velocidad del personaje en el script "PersonajePatrullaje" a 7.
+                personaje.velocidad = 7.0f;
+            }
+            else
+            {
+                Debug.LogError("El componente 'PersonajePatrullaje' no se encontró en este GameObject.");
+            }
+
+            if (puntos == 15)
+            {
+                Debug.Log("Cherry");
+                CherryVariant.SetActive(true);
+                Destroy(MuroDestroy);
+
+            }
+
+
+
+
+        } 
+    }
+
+        public void SumarPuntos(float puntosEntrada)
+        {
+            puntos += puntosEntrada;
 
         }
 
-       
-
-    }
-
-    public void SumarPuntos(float puntosEntrada)
-    {
-        puntos += puntosEntrada;
-       
-    }
-    
-    
 
 
 
-   
 
-    
-        
-}
+
+
+
+
+ }
+
+
 
     
 
